@@ -1,0 +1,44 @@
+#!/system/bin/python
+
+import itertools
+import string
+import time
+import hashlib
+
+class brute():
+
+    def __init__(self ,charset ,start ,end):
+
+        self.charset = charset
+        self.start = start
+        self.end = end
+    
+############################################################################################################################
+    def hash(self, md5):
+        
+        self.md5 = md5
+        
+        anf = time.time()
+        var = (''.join(candidate)
+                    for candidate in itertools.chain.from_iterable(itertools.product(self.charset, repeat=i)
+		    for i in range(self.start, self.end + 1)))
+        
+        for x in var:
+           print x,hashlib.md5(x).hexdigest()
+
+           if hashlib.md5(x).hexdigest() == self.md5:
+
+                print "\n------------# p@ssw0rd #------------\n"
+                print "String: [%s]\nLenght: [%s]" % (x ,len(x))
+                print "Hash: [%s]" % hashlib.md5(x).hexdigest()
+                print "\nRechenzeit: ",time.time() - anf ,"sec.\n"
+                print "--------------------------------------"
+                print "<c0d3x:/> by [p!sl!ck]\n"
+
+                break
+############################################################################################################################
+
+                                                                   
+if __name__ == "__main__":
+    
+    brute(string.letters,7,20).hash("2d48841fc20c37da92dd7426dceee99c")  #hash ->'' => ''
