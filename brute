@@ -33,7 +33,7 @@ class brute():
                 print "Hash: [%s]" % hashlib.md5(x).hexdigest()
                 print "\nRechenzeit: ",time.time() - anf ,"sec.\n"
                 print "--------------------------------------"
-                print "<c0d3x:/> by [p!sl!ck]\n"
+                print "<c0d3x:/> by [0wnaZ]\n"
 
                 break
 ############################################################################################################################
