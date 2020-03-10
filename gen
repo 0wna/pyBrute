@@ -30,14 +30,14 @@ def main(size):
 		           ``:::::::::::::::::::''
 		                ``:::::::::''
         		r@nd0m_p@ssw0rt_g3n3r@¦0r v0.0
-                		c0d3x by [p!sl!ck]
+                		c0d3x by [0wnaZ]
 
 	"""
 
 	print "-----------------------------------# p@ssw0rd #------------------------------------\n"
 
 	count = 0
-	while count <= 10:
+	while count <= 50:
 		count = count + 1
 		print "%s" % ''.join(choice(string.letters + "1234567890" + "!$%&/()=?\}][{,;.:-_#+*'")for x in range(size)),''.join(choice(string.letters + "1234567890")for x in range(size)),''.join(choice("0987654321" + "1234567890")for x in range(size)),''.join(choice(string.letters)for x in range(size))
 if __name__ == "__main__":
